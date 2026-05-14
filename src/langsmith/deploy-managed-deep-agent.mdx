@@ -5,11 +5,13 @@ icon: "robot"
 tag: "PREVIEW"
 ---
 
-Managed Deep Agents is a hosted runtime for the open-source [Deep Agents](/oss/python/deepagents/overview) harness. Create, run, and operate Deep Agents in LangSmith without standing up custom infrastructure.
+Managed Deep Agents is a hosted runtime for the open-source [Deep Agents](/oss/deepagents/overview) harness. Create, run, and operate Deep Agents in LangSmith without standing up custom infrastructure.
 
 <Note>
-    Managed Deep Agents is in private preview. [Join the waitlist](https://www.langchain.com/langsmith-managed-deep-agents-waitlist) to request access.
+Managed Deep Agents is in private preview. [Join the waitlist](https://www.langchain.com/langsmith-managed-deep-agents-waitlist) to request access.
 </Note>
+
+Deep Agents give developers an open-source harness for building agents that can plan, use tools, delegate to subagents, write files, and work over long horizons. Managed Deep Agents packages the operational layer around that harness, so you can focus on the agent's behavior instead of running custom runtime infrastructure.
 
 This guide walks through one end-to-end flow. For route-level details, see the [Managed Deep Agents API reference](/langsmith/managed-deep-agents-api).
 
@@ -18,9 +20,10 @@ This guide walks through one end-to-end flow. For route-level details, see the [
 Use Managed Deep Agents when you want to:
 
 - Create and manage Deep Agents programmatically.
-- Run long-horizon agents without standing up a custom agent server.
+- Run long-running agents without standing up a custom agent server.
 - Stream runs and preserve durable thread state.
-- Inspect traces, files, and tool calls in LangSmith.
+- Use managed files and tools.
+- Inspect traces and agent behavior in LangSmith.
 
 <Tip>
     You can also deploy Deep Agents with a standard [LangSmith Deployment](/langsmith/deployment-quickstart). Choose that path when you need custom application code, custom routes, advanced auth, the full Agent Server API, stronger isolation, or maximum scalability.
@@ -31,7 +34,7 @@ Use Managed Deep Agents when you want to:
 Before you start, make sure you have:
 
 - Managed Deep Agents private preview access.
-- A LangSmith API key for a workspace with private preview access.
+- A [LangSmith API key](/langsmith/create-account-api-key) for a workspace with private preview access.
 - A Deep Agent definition (instructions plus any tool configuration).
 
 Set request defaults for the examples in this guide:
@@ -208,9 +211,11 @@ Pick stream modes based on the experience you want to build:
 | `updates` | Incremental state updates as the agent works. |
 | `messages-tuple` | Token-level message output for chat UIs. |
 
+Every run is traced automatically. See [Inspect the run in LangSmith](#inspect-the-run-in-langsmith).
+
 ## Inspect the run in LangSmith
 
-Every run on a Managed Deep Agent is traced in LangSmith. Open the trace from your workspace's tracing view to inspect:
+Every run on a Managed Deep Agent is [traced in LangSmith](/langsmith/observability). Open the trace from your workspace's tracing view to inspect:
 
 - The user's input and the agent's final response.
 - Model calls and tool calls.
@@ -233,6 +238,7 @@ curl --request PATCH \
   --header "X-Api-Key: $LANGSMITH_API_KEY" \
   --header 'Content-Type: application/json' \
   --data '{
+    "description": "Research assistant that searches the web, reads URLs, and summarizes sources.",
     "instructions": "You are a careful research assistant. Search for sources, read relevant pages, keep notes, and return concise answers with citations.",
     "tools": {
       "tools": [
@@ -302,4 +308,4 @@ Private preview covers the agent lifecycle, threads, and runs. Other LangSmith D
 ## Next steps
 
 - Browse the [Managed Deep Agents API reference](/langsmith/managed-deep-agents-api) for full route-level details.
-- New to Deep Agents? Read the [open-source Deep Agents overview](/oss/python/deepagents/overview).
+- New to Deep Agents? Read the [open-source Deep Agents overview](/oss/deepagents/overview).
