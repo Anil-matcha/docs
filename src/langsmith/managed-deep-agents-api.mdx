@@ -1,24 +1,18 @@
 ---
 title: Managed Deep Agents API
 sidebarTitle: Overview
-description: Reference overview for the Managed Deep Agents private preview API.
+description: REST API for creating, running, and managing hosted Deep Agents in LangSmith.
 icon: "api"
 tag: "PREVIEW"
 ---
 
-The Managed Deep Agents API is a private preview API for creating, updating, and invoking Managed Deep Agents.
+Use the Managed Deep Agents API to create hosted Deep Agents, manage durable threads, and stream runs from LangSmith.
 
 <Note>
-    Managed Deep Agents is in private preview. [Join the waitlist](https://www.langchain.com/langsmith-managed-deep-agents-waitlist) to request access. For usage guidance, see [Deploy Managed Deep Agents](/langsmith/deploy-managed-deep-agent).
+    Managed Deep Agents is in private preview. [Join the waitlist](https://www.langchain.com/langsmith-managed-deep-agents-waitlist) to request access. For an end-to-end walkthrough with request examples, see [Deploy Managed Deep Agents](/langsmith/deploy-managed-deep-agent).
 </Note>
 
-For an end-to-end workflow with request examples, see [Deploy Managed Deep Agents](/langsmith/deploy-managed-deep-agent).
-
-Browse the Managed Deep Agents API reference pages in the sidebar. The generated reference includes:
-
-- Agents: Create, list, get, update, and delete Managed Deep Agents.
-- Threads: Create, search, count, and inspect durable thread state.
-- Runs: Start and stream runs on Managed Deep Agent threads.
+For a conceptual introduction to the underlying framework, see the [open source Deep Agents docs](/oss/python/deepagents/overview).
 
 ## Authentication
 
@@ -28,9 +22,20 @@ Requests require a LangSmith API key for a workspace with Managed Deep Agents pr
 X-Api-Key: <LANGSMITH_API_KEY>
 ```
 
-## Base route
+## Base URL
 
-The private preview API uses `/v1/deepagents`.
+The private preview API is served from `https://api.smith.langchain.com/v1/deepagents`. Self-hosted and Hybrid deployments are not supported in private preview.
+
+## Verify access
+
+Confirm your API key and workspace have private preview access before working through the route reference:
+
+```bash
+curl https://api.smith.langchain.com/v1/deepagents/agents \
+  -H "X-Api-Key: $LANGSMITH_API_KEY"
+```
+
+A `200` response with a (possibly empty) list of agents confirms access. A `401` or `403` means the workspace is not enrolled in the preview.
 
 ## Resource groups
 
@@ -42,4 +47,9 @@ The private preview API uses `/v1/deepagents`.
 
 ## Private preview scope
 
-Managed Deep Agents does not mirror every LangSmith Deployment endpoint in private preview. Endpoint groups such as integrations, auth, triggers, skills, and sandboxes are not mirrored yet.
+Private preview covers the agent lifecycle, threads, and runs. Other LangSmith Deployment endpoint groups, including integrations, auth, triggers, skills, and sandboxes, are out of scope for this preview.
+
+## Next steps
+
+- Have access? See [Deploy Managed Deep Agents](/langsmith/deploy-managed-deep-agent) for an end-to-end walkthrough.
+- Need access? [Join the private preview waitlist](https://www.langchain.com/langsmith-managed-deep-agents-waitlist).
