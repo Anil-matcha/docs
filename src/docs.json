@@ -74,8 +74,8 @@
   },
   "seo": {
     "metatags": {
-        "canonical": "https://docs.langchain.com",
-        "google-site-verification": "9_2KHeJwmEdwgncBRk1MsKxriZz7Sc21EJdbfCxkTEo"
+      "canonical": "https://docs.langchain.com",
+      "google-site-verification": "9_2KHeJwmEdwgncBRk1MsKxriZz7Sc21EJdbfCxkTEo"
     }
   },
   "head": [
@@ -154,7 +154,7 @@
     }
   },
   "navigation": {
-      "products": [
+    "products": [
       {
         "product": "Home",
         "icon": "home",
