@@ -512,6 +512,108 @@
                     ]
                   }
                 ]
+              },
+              {
+                "tab": "Fleet",
+                "pages": [
+                  "langsmith/fleet/index",
+                  {
+                    "group": "Get started",
+                    "pages": [
+                      "langsmith/fleet/quickstart",
+                      "langsmith/fleet/essentials",
+                      "langsmith/fleet/templates",
+                      "langsmith/fleet/comparison"
+                    ]
+                  },
+                  {
+                    "group": "Configure",
+                    "pages": [
+                      "langsmith/fleet/workspace-admin",
+                      "langsmith/fleet/agent-identity",
+                      "langsmith/fleet/manage-agent-settings"
+                    ]
+                  },
+                  {
+                    "group": "Tools and automation",
+                    "pages": [
+                      "langsmith/fleet/tools",
+                      "langsmith/fleet/channels",
+                      "langsmith/fleet/schedules",
+                      "langsmith/fleet/skills",
+                      "langsmith/fleet/slack-app",
+                      "langsmith/fleet/teams-app",
+                      "langsmith/fleet/remote-mcp-servers",
+                      "langsmith/fleet/arcade",
+                      "langsmith/fleet/salesforce"
+                    ]
+                  },
+                  {
+                    "group": "Advanced",
+                    "pages": [
+                      "langsmith/fleet/code",
+                      "langsmith/fleet/mcp-framework",
+                      "langsmith/fleet/webhooks",
+                      "langsmith/fleet/auth-format"
+                    ]
+                  },
+                  {
+                    "group": "Additional resources",
+                    "pages": [
+                      "langsmith/fleet/access-and-oversight",
+                      "langsmith/fleet/pricing-faq",
+                      "langsmith/fleet/self-hosted-link"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tab": "Prompts",
+                "pages": [
+                  "langsmith/prompt-engineering",
+                  "langsmith/prompt-engineering-quickstart",
+                  "langsmith/prompt-engineering-concepts",
+                  "langsmith/polly-prompt-engineering",
+                  "langsmith/playground-model-providers",
+                  {
+                    "group": "Create and update prompts",
+                    "pages": [
+                      "langsmith/create-a-prompt",
+                      "langsmith/manage-prompts",
+                      "langsmith/manage-prompts-programmatically",
+                      "langsmith/prompt-template-format",
+                      "langsmith/managing-model-configurations",
+                      "langsmith/use-tools",
+                      "langsmith/multimodal-content",
+                      "langsmith/write-prompt-with-ai",
+                      {
+                        "group": "Connect to models",
+                        "pages": [
+                          "langsmith/custom-openai-compliant-model",
+                          "langsmith/custom-endpoint"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Tutorials",
+                    "pages": [
+                      "langsmith/optimize-classifier",
+                      "langsmith/prompt-commit",
+                      "langsmith/multiple-messages"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tab": "Studio",
+                "pages": [
+                  "langsmith/studio",
+                  "langsmith/quick-start-studio",
+                  "langsmith/use-studio",
+                  "langsmith/observability-studio",
+                  "langsmith/troubleshooting-studio"
+                ]
               }
             ]
           },
@@ -867,111 +969,109 @@
                     ]
                   }
                 ]
-              }
-            ]
-          }
-        ],
-        "tabs": [
-          {
-            "tab": "Fleet",
-            "pages": [
-              "langsmith/fleet/index",
-              {
-                "group": "Get started",
-                "pages": [
-                  "langsmith/fleet/quickstart",
-                  "langsmith/fleet/essentials",
-                  "langsmith/fleet/templates",
-                  "langsmith/fleet/comparison"
-                ]
               },
               {
-                "group": "Configure",
+                "tab": "Fleet",
                 "pages": [
-                  "langsmith/fleet/workspace-admin",
-                  "langsmith/fleet/agent-identity",
-                  "langsmith/fleet/manage-agent-settings"
-                ]
-              },
-              {
-                "group": "Tools and automation",
-                "pages": [
-                  "langsmith/fleet/tools",
-                  "langsmith/fleet/channels",
-                  "langsmith/fleet/schedules",
-                  "langsmith/fleet/skills",
-                  "langsmith/fleet/slack-app",
-                  "langsmith/fleet/teams-app",
-                  "langsmith/fleet/remote-mcp-servers",
-                  "langsmith/fleet/arcade",
-                  "langsmith/fleet/salesforce"
-                ]
-              },
-              {
-                "group": "Advanced",
-                "pages": [
-                  "langsmith/fleet/code",
-                  "langsmith/fleet/mcp-framework",
-                  "langsmith/fleet/webhooks",
-                  "langsmith/fleet/auth-format"
-                ]
-              },
-              {
-                "group": "Additional resources",
-                "pages": [
-                  "langsmith/fleet/access-and-oversight",
-                  "langsmith/fleet/pricing-faq",
-                  "langsmith/fleet/self-hosted-link"
-                ]
-              }
-            ]
-          },
-          {
-            "tab": "Prompts",
-            "pages": [
-              "langsmith/prompt-engineering",
-              "langsmith/prompt-engineering-quickstart",
-              "langsmith/prompt-engineering-concepts",
-              "langsmith/polly-prompt-engineering",
-              "langsmith/playground-model-providers",
-              {
-                "group": "Create and update prompts",
-                "pages": [
-                  "langsmith/create-a-prompt",
-                  "langsmith/manage-prompts",
-                  "langsmith/manage-prompts-programmatically",
-                  "langsmith/prompt-template-format",
-                  "langsmith/managing-model-configurations",
-                  "langsmith/use-tools",
-                  "langsmith/multimodal-content",
-                  "langsmith/write-prompt-with-ai",
+                  "langsmith/fleet/index",
                   {
-                    "group": "Connect to models",
+                    "group": "Get started",
                     "pages": [
-                      "langsmith/custom-openai-compliant-model",
-                      "langsmith/custom-endpoint"
+                      "langsmith/fleet/quickstart",
+                      "langsmith/fleet/essentials",
+                      "langsmith/fleet/templates",
+                      "langsmith/fleet/comparison"
+                    ]
+                  },
+                  {
+                    "group": "Configure",
+                    "pages": [
+                      "langsmith/fleet/workspace-admin",
+                      "langsmith/fleet/agent-identity",
+                      "langsmith/fleet/manage-agent-settings"
+                    ]
+                  },
+                  {
+                    "group": "Tools and automation",
+                    "pages": [
+                      "langsmith/fleet/tools",
+                      "langsmith/fleet/channels",
+                      "langsmith/fleet/schedules",
+                      "langsmith/fleet/skills",
+                      "langsmith/fleet/slack-app",
+                      "langsmith/fleet/teams-app",
+                      "langsmith/fleet/remote-mcp-servers",
+                      "langsmith/fleet/arcade",
+                      "langsmith/fleet/salesforce"
+                    ]
+                  },
+                  {
+                    "group": "Advanced",
+                    "pages": [
+                      "langsmith/fleet/code",
+                      "langsmith/fleet/mcp-framework",
+                      "langsmith/fleet/webhooks",
+                      "langsmith/fleet/auth-format"
+                    ]
+                  },
+                  {
+                    "group": "Additional resources",
+                    "pages": [
+                      "langsmith/fleet/access-and-oversight",
+                      "langsmith/fleet/pricing-faq",
+                      "langsmith/fleet/self-hosted-link"
                     ]
                   }
                 ]
               },
               {
-                "group": "Tutorials",
+                "tab": "Prompts",
                 "pages": [
-                  "langsmith/optimize-classifier",
-                  "langsmith/prompt-commit",
-                  "langsmith/multiple-messages"
+                  "langsmith/prompt-engineering",
+                  "langsmith/prompt-engineering-quickstart",
+                  "langsmith/prompt-engineering-concepts",
+                  "langsmith/polly-prompt-engineering",
+                  "langsmith/playground-model-providers",
+                  {
+                    "group": "Create and update prompts",
+                    "pages": [
+                      "langsmith/create-a-prompt",
+                      "langsmith/manage-prompts",
+                      "langsmith/manage-prompts-programmatically",
+                      "langsmith/prompt-template-format",
+                      "langsmith/managing-model-configurations",
+                      "langsmith/use-tools",
+                      "langsmith/multimodal-content",
+                      "langsmith/write-prompt-with-ai",
+                      {
+                        "group": "Connect to models",
+                        "pages": [
+                          "langsmith/custom-openai-compliant-model",
+                          "langsmith/custom-endpoint"
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "group": "Tutorials",
+                    "pages": [
+                      "langsmith/optimize-classifier",
+                      "langsmith/prompt-commit",
+                      "langsmith/multiple-messages"
+                    ]
+                  }
+                ]
+              },
+              {
+                "tab": "Studio",
+                "pages": [
+                  "langsmith/studio",
+                  "langsmith/quick-start-studio",
+                  "langsmith/use-studio",
+                  "langsmith/observability-studio",
+                  "langsmith/troubleshooting-studio"
                 ]
               }
-            ]
-          },
-          {
-            "tab": "Studio",
-            "pages": [
-              "langsmith/studio",
-              "langsmith/quick-start-studio",
-              "langsmith/use-studio",
-              "langsmith/observability-studio",
-              "langsmith/troubleshooting-studio"
             ]
           }
         ]
