@@ -1721,7 +1721,8 @@
                 "error",
                 "success",
                 "timeout",
-                "interrupted"
+                "interrupted",
+                "skipped"
               ]
             },
             "name": "status",
@@ -1750,6 +1751,17 @@
             },
             "name": "select",
             "in": "query"
+          },
+          {
+            "required": false,
+            "schema": {
+              "type": "boolean",
+              "title": "Continuous Batch",
+              "default": false
+            },
+            "name": "continuous_batch",
+            "in": "query",
+            "description": "When true, returns only the contiguous batch of runs matching the status filter starting at offset, stopping at the first run that doesn't match. Requires status to be set; cannot be combined with metadata."
           }
         ],
         "responses": {
@@ -4948,10 +4960,11 @@
               "error",
               "success",
               "timeout",
-              "interrupted"
+              "interrupted",
+              "skipped"
             ],
             "title": "Status",
-            "description": "The status of the run. One of 'pending', 'running', 'error', 'success', 'timeout', 'interrupted'."
+            "description": "The status of the run. One of 'pending', 'running', 'error', 'success', 'timeout', 'interrupted', 'skipped'. A 'skipped' run was pending but never executed (e.g. cancelled by interrupt multitask strategy before execution began)."
           },
           "metadata": {
             "type": "object",
