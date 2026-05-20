@@ -9,76 +9,52 @@ mode: "custom"
     <div class="mdx-content prose prose-gray dark:prose-invert mx-4 pt-10">
         <h1 class="flex whitespace-pre-wrap group font-semibold text-2xl sm:text-3xl mt-8">Documentation</h1>
 
-        LangChain is the platform for agent engineering. AI teams at Clay, Rippling, Cloudflare, Workday, and more trust LangChain's products to engineer reliable agents.
+        LangChain is the platform for agent engineering. Build, test, deploy, monitor, and govern reliable agents across every stage of the development lifecycle.
 
-        <h2 class="flex whitespace-pre-wrap group font-semibold">LangSmith</h2>
-
-        [**LangSmith**](/langsmith/home) is a platform that helps AI teams use live production data for continuous testing and improvement. LangSmith provides:
+        <h2 class="flex whitespace-pre-wrap group font-semibold">Agent development lifecycle</h2>
 
         <CardGroup cols={3}>
             <Card
-                title="Observability"
-                href="/langsmith/observability"
-                icon="/images/brand/observability-icon-dark.png"
-                cta="Learn more"
+                title="Build"
+                href="/oss/python/deepagents/overview"
+                icon="hammer"
+                cta="Start building"
             >
-                See exactly how your agent thinks and acts with detailed tracing and aggregate trend metrics.
+                Build agents with open source frameworks (Deep Agents, LangChain, LangGraph), no-code tools (Fleet), and prompt engineering.
             </Card>
             <Card
-                title="Engine (Beta)"
-                href="/langsmith/engine"
-                icon="engine"
-                cta="Learn more"
-            >
-                Automatically detect and resolve recurring issues in your tracing projects.
-            </Card>
-            <Card
-                title="Evaluation"
+                title="Test"
                 href="/langsmith/evaluation"
-                icon="/images/brand/evaluation-icon-dark.png"
-                cta="Learn more"
+                icon="flask"
+                cta="Set up testing"
             >
-                Test and score agent behavior on production data or offline datasets to continuously improve performance.
+                Evaluate and score agent behavior with offline datasets, online evaluators, and human feedback.
             </Card>
             <Card
-                title="Prompt Engineering"
-                href="/langsmith/prompt-engineering"
-                icon="/images/brand/prompt-engineering-icon.png"
-                cta="Learn more"
-            >
-                Iterate on prompts with version control, prompt optimization, and collaboration features.
-            </Card>
-            <Card
-                title="Deployment"
+                title="Deploy"
                 href="/langsmith/deployment"
-                icon="/images/brand/deployment-icon-dark.png"
-                cta="Learn more"
+                icon="rocket"
+                cta="Deploy agents"
             >
-                Ship your agent in one click, using scalable infrastructure built for long-running tasks.
+                Ship agents to production with durable execution, real-time streaming, and horizontal scaling.
             </Card>
             <Card
-                title="LLM Gateway (Private beta)"
-                href="/langsmith/llm-gateway"
-                icon="route"
-                cta="Learn more"
+                title="Monitor"
+                href="/langsmith/observability"
+                icon="chart-line"
+                cta="Set up tracing"
             >
-                Proxy LLM calls to enforce spend limits, redact sensitive data, and centrally manage provider credentials.
+                Trace, debug, and monitor agent performance with detailed tracing and aggregate metrics.
+            </Card>
+            <Card
+                title="Govern"
+                href="/langsmith/home"
+                icon="shield-check"
+                cta="Manage access"
+            >
+                Manage access control, LLM gateway policies, audit logs, and compliance.
             </Card>
         </CardGroup>
-
-        <Callout icon="shield-lock" color="#4F46E5" iconType="regular">
-        LangSmith meets the highest standards of data security and privacy with HIPAA, SOC 2 Type 2, and GDPR compliance. [Meet with our team](https://www.langchain.com/contact-sales) to learn more or visit our [Trust Center](https://trust.langchain.com/).
-        </Callout>
-
-        <h2 class="flex whitespace-pre-wrap group font-semibold">LangSmith Fleet</h2>
-        <Card
-                title="Fleet"
-                href="/langsmith/fleet/index"
-                icon="/images/brand/fleet-icon-dark.png"
-                cta="Learn more"
-            >
-                Create helpful AI agents without code. Start from a template, connect your accounts, and let the agent handle routine work while you stay in control.
-            </Card>
 
         <h2 class="flex whitespace-pre-wrap group font-semibold">Open source agent frameworks</h2>
 
@@ -86,7 +62,7 @@ mode: "custom"
             <Tab title="Python" icon="brand-python">
                 <CardGroup cols={3}>
                     <Card
-                        title="Deep Agents (Python)"
+                        title="Deep Agents"
                         href="/oss/python/deepagents/overview"
                         icon="/images/brand/deep-agents-icon.png"
                         cta="Learn more"
@@ -94,7 +70,7 @@ mode: "custom"
                         Quickly build agents that can tackle any task.
                     </Card>
                     <Card
-                        title="LangChain (Python)"
+                        title="LangChain"
                         href="/oss/python/langchain/overview"
                         icon="/images/brand/langchain-icon.png"
                         cta="Learn more"
@@ -102,7 +78,7 @@ mode: "custom"
                         Customize the building blocks of your agents.
                     </Card>
                     <Card
-                        title="LangGraph (Python)"
+                        title="LangGraph"
                         href="/oss/python/langgraph/overview"
                         icon="/images/brand/langgraph-icon.png"
                         cta="Learn more"
@@ -114,7 +90,7 @@ mode: "custom"
             <Tab title="TypeScript" icon="brand-typescript">
                 <CardGroup cols={3}>
                     <Card
-                        title="Deep Agents (TypeScript)"
+                        title="Deep Agents"
                         href="/oss/javascript/deepagents/overview"
                         icon="/images/brand/deep-agents-icon.png"
                         cta="Learn more"
@@ -122,7 +98,7 @@ mode: "custom"
                         Quickly build agents that can tackle any task.
                     </Card>
                     <Card
-                        title="LangChain (TypeScript)"
+                        title="LangChain"
                         href="/oss/javascript/langchain/overview"
                         icon="/images/brand/langchain-icon.png"
                         cta="Learn more"
@@ -130,7 +106,7 @@ mode: "custom"
                         Customize the building blocks of your agents.
                     </Card>
                     <Card
-                        title="LangGraph (TypeScript)"
+                        title="LangGraph"
                         href="/oss/javascript/langgraph/overview"
                         icon="/images/brand/langgraph-icon.png"
                         cta="Learn more"
@@ -140,6 +116,10 @@ mode: "custom"
                 </CardGroup>
             </Tab>
         </Tabs>
+
+        <Callout icon="shield-lock" color="#4F46E5" iconType="regular">
+        LangSmith meets the highest standards of data security and privacy with HIPAA, SOC 2 Type 2, and GDPR compliance. [Meet with our team](https://www.langchain.com/contact-sales) to learn more or visit our [Trust Center](https://trust.langchain.com/).
+        </Callout>
 
         <h2 class="flex whitespace-pre-wrap group font-semibold">Get started</h2>
 
